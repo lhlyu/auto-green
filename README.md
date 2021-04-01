@@ -4,7 +4,7 @@
 
 自动保持 GitHub 提交状态常绿。
 
-> a commit a day keeps your girlfriend away.
+> must be ragged but I stay by your side.
 
 ## 原理
 
