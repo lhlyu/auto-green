@@ -13,6 +13,12 @@ jobs:
     steps:
       - name: Clone repository
         uses: actions/checkout@v2
+        
+      - name: Test
+        run: |
+          ls -l
+          R=$(curl -k -s https://api.mxooo.cn/yiyan/?type=json)
+          echo $R
 
       - name: Auto green
         run: |
