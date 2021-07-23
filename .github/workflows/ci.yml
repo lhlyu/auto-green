@@ -17,7 +17,7 @@ jobs:
       - name: Test
         run: |
           ls -l
-          R=$(curl -k -s https://api.mxooo.cn/yiyan/?type=json)
+          R=(shuf -n1 ./text.txt)
           echo $R
 
       - name: Auto green
