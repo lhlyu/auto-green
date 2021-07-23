@@ -17,7 +17,7 @@ jobs:
       - name: Test
         run: |
           ls -l
-          R=(shuf -n1 ./text.txt)
+          R=$(shuf -n1 ./text.txt)
           echo $R
 
       - name: Auto green
