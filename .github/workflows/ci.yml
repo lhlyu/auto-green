@@ -16,6 +16,7 @@ jobs:
 
       - name: Auto green
         run: |
+          echo $RANDOM
           S=$(curl 'https://v1.hitokoto.cn/?c=a&encode=text')
           git config --local user.email "2438211370@qq.com"
           git config --local user.name "lhlyu"
