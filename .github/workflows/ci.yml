@@ -15,8 +15,9 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Auto green
+        if: $RANDOM > 16383
         run: |
-          echo $RANDOM
+          echo 'begining'
           S=$(curl 'https://v1.hitokoto.cn/?c=a&encode=text')
           git config --local user.email "2438211370@qq.com"
           git config --local user.name "lhlyu"
@@ -24,3 +25,4 @@ jobs:
           git pull --rebase
           git commit --allow-empty -m "${S}"
           git push
+          echo 'end'
