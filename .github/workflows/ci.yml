@@ -17,7 +17,8 @@ jobs:
       - name: Auto green
         run: |
           R=$(shuf -n1 ./text.txt)
-          R=$(curl https://v1.hitokoto.cn/?c=a&encode=text)
+          S=$(curl --compressed https://v1.hitokoto.cn/?c=a&encode=text)
+          echo $S
           git config --local user.email "2438211370@qq.com"
           git config --local user.name "lhlyu"
           git remote set-url origin https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
