@@ -17,7 +17,7 @@ jobs:
       - name: Auto green
         run: |
           R=$(shuf -n1 ./text.txt)
-          S=$(curl --compressed https://v1.hitokoto.cn/?c=a&encode=text)
+          S=$(curl 'https://v1.hitokoto.cn/?c=a&encode=text')
           echo '------------>'
           echo $S
           echo '------------>'
