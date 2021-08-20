@@ -13,12 +13,16 @@ jobs:
     steps:
       - name: Clone repository
         uses: actions/checkout@v2
+        
+      - name: Random Execute
+        run: |
+          R=$RANDOM
+          echo $R
+          if [$R -gt 16383];then exit 1;  
 
       - name: Auto green
         run: |
           echo 'begining'
-          R=$RANDOM
-          echo $R
           S=$(curl 'https://v1.hitokoto.cn/?c=a&encode=text')
           git config --local user.email "2438211370@qq.com"
           git config --local user.name "lhlyu"
