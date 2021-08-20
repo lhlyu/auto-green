@@ -17,8 +17,9 @@ jobs:
       - name: Random Execute
         run: |
           R=$RANDOM
+          M=16383
           echo $R
-          if [$R -gt 16383];then exit 1;  
+          if [ $R -gt $M ];then exit 1;fi  
 
       - name: Auto green
         run: |
