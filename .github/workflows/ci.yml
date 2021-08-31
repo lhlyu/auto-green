@@ -19,7 +19,7 @@ jobs:
           R=$RANDOM
           M=20000
           echo $R
-          if [ $R -lt $M ];then exit 0;fi  
+          if [ $R -lt $M ];then exit 1;fi  
 
       - name: Auto green
         run: |
