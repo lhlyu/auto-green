@@ -17,7 +17,7 @@ jobs:
       - name: Random Execute
         run: |
           R=$RANDOM
-          M=13000
+          M=20000
           echo $R
           if [ $R -lt $M ];then exit 1;fi  
 
